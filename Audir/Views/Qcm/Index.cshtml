@@ -35,10 +35,10 @@
                         <div class="panel-footer">
                             <div class="row">
 
-                                <input type="radio" value="Oui/@x.Id" name="@x.Id" />
+                                <input type="radio" value="Oui/@x.Id.ToString()" name="@x.Id.ToString()" />
                                 <label for="@x.Id">Oui</label>
                                 <br />
-                                <input type="radio" value="Nom/@x.Id" name="@x.Id" />
+                                <input type="radio" value="Non/@x.Id.ToString()" name="@x.Id.ToString()" />
                                 <label for="@x.Id">Non</label>
 
                             </div>
@@ -50,6 +50,8 @@
             </div>
         };
 
-        <input type="submit"  value="valider"/>
+        <input type="submit" value="Résultats" name="valider" />
+        <input type="submit" value="Résumé"   name="valider"/>
+        <input type="submit" value="Chart"   name="valider"/>
     </form>
 </body>

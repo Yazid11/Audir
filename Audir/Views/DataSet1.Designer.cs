@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Audir {
+namespace Audir.Views {
     
     
     /// <summary>
@@ -24,7 +24,7 @@ namespace Audir {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DataSet1 : global::System.Data.DataSet {
         
-        private QuestionDataTable tableQuestion;
+        private traitementDataTable tabletraitement;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace Audir {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Question"] != null)) {
-                    base.Tables.Add(new QuestionDataTable(ds.Tables["Question"]));
+                if ((ds.Tables["traitement"] != null)) {
+                    base.Tables.Add(new traitementDataTable(ds.Tables["traitement"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Audir {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public QuestionDataTable Question {
+        public traitementDataTable traitement {
             get {
-                return this.tableQuestion;
+                return this.tabletraitement;
             }
         }
         
@@ -152,8 +152,8 @@ namespace Audir {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Question"] != null)) {
-                    base.Tables.Add(new QuestionDataTable(ds.Tables["Question"]));
+                if ((ds.Tables["traitement"] != null)) {
+                    base.Tables.Add(new traitementDataTable(ds.Tables["traitement"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Audir {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableQuestion = ((QuestionDataTable)(base.Tables["Question"]));
+            this.tabletraitement = ((traitementDataTable)(base.Tables["traitement"]));
             if ((initTable == true)) {
-                if ((this.tableQuestion != null)) {
-                    this.tableQuestion.InitVars();
+                if ((this.tabletraitement != null)) {
+                    this.tabletraitement.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace Audir {
             this.Namespace = "http://tempuri.org/DataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableQuestion = new QuestionDataTable();
-            base.Tables.Add(this.tableQuestion);
+            this.tabletraitement = new traitementDataTable();
+            base.Tables.Add(this.tabletraitement);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeQuestion() {
+        private bool ShouldSerializetraitement() {
             return false;
         }
         
@@ -270,27 +270,27 @@ namespace Audir {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void QuestionRowChangeEventHandler(object sender, QuestionRowChangeEvent e);
+        public delegate void traitementRowChangeEventHandler(object sender, traitementRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class QuestionDataTable : global::System.Data.TypedTableBase<QuestionRow> {
+        public partial class traitementDataTable : global::System.Data.TypedTableBase<traitementRow> {
             
-            private global::System.Data.DataColumn columnId;
+            private global::System.Data.DataColumn columnnb_qst;
             
-            private global::System.Data.DataColumn columntext;
+            private global::System.Data.DataColumn columnnbqsttraité;
             
-            private global::System.Data.DataColumn columnreponse;
+            private global::System.Data.DataColumn columnnbqstnontrairé;
             
             private global::System.Data.DataColumn columntype;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public QuestionDataTable() {
-                this.TableName = "Question";
+            public traitementDataTable() {
+                this.TableName = "traitement";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +298,7 @@ namespace Audir {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal QuestionDataTable(global::System.Data.DataTable table) {
+            internal traitementDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,32 +315,32 @@ namespace Audir {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected QuestionDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected traitementDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn IdColumn {
+            public global::System.Data.DataColumn nb_qstColumn {
                 get {
-                    return this.columnId;
+                    return this.columnnb_qst;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn textColumn {
+            public global::System.Data.DataColumn nbqsttraitéColumn {
                 get {
-                    return this.columntext;
+                    return this.columnnbqsttraité;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn reponseColumn {
+            public global::System.Data.DataColumn nbqstnontrairéColumn {
                 get {
-                    return this.columnreponse;
+                    return this.columnnbqstnontrairé;
                 }
             }
             
@@ -363,48 +363,48 @@ namespace Audir {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public QuestionRow this[int index] {
+            public traitementRow this[int index] {
                 get {
-                    return ((QuestionRow)(this.Rows[index]));
+                    return ((traitementRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event QuestionRowChangeEventHandler QuestionRowChanging;
+            public event traitementRowChangeEventHandler traitementRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event QuestionRowChangeEventHandler QuestionRowChanged;
+            public event traitementRowChangeEventHandler traitementRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event QuestionRowChangeEventHandler QuestionRowDeleting;
+            public event traitementRowChangeEventHandler traitementRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event QuestionRowChangeEventHandler QuestionRowDeleted;
+            public event traitementRowChangeEventHandler traitementRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddQuestionRow(QuestionRow row) {
+            public void AddtraitementRow(traitementRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public QuestionRow AddQuestionRow(string Id, string text, string reponse, string type) {
-                QuestionRow rowQuestionRow = ((QuestionRow)(this.NewRow()));
+            public traitementRow AddtraitementRow(string nb_qst, string nbqsttraité, string nbqstnontrairé, string type) {
+                traitementRow rowtraitementRow = ((traitementRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Id,
-                        text,
-                        reponse,
+                        nb_qst,
+                        nbqsttraité,
+                        nbqstnontrairé,
                         type};
-                rowQuestionRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowQuestionRow);
-                return rowQuestionRow;
+                rowtraitementRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtraitementRow);
+                return rowtraitementRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                QuestionDataTable cln = ((QuestionDataTable)(base.Clone()));
+                traitementDataTable cln = ((traitementDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -412,55 +412,55 @@ namespace Audir {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new QuestionDataTable();
+                return new traitementDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnId = base.Columns["Id"];
-                this.columntext = base.Columns["text"];
-                this.columnreponse = base.Columns["reponse"];
+                this.columnnb_qst = base.Columns["nb_qst"];
+                this.columnnbqsttraité = base.Columns["nbqsttraité"];
+                this.columnnbqstnontrairé = base.Columns["nbqstnontrairé"];
                 this.columntype = base.Columns["type"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId);
-                this.columntext = new global::System.Data.DataColumn("text", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntext);
-                this.columnreponse = new global::System.Data.DataColumn("reponse", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnreponse);
+                this.columnnb_qst = new global::System.Data.DataColumn("nb_qst", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnb_qst);
+                this.columnnbqsttraité = new global::System.Data.DataColumn("nbqsttraité", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnbqsttraité);
+                this.columnnbqstnontrairé = new global::System.Data.DataColumn("nbqstnontrairé", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnbqstnontrairé);
                 this.columntype = new global::System.Data.DataColumn("type", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntype);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public QuestionRow NewQuestionRow() {
-                return ((QuestionRow)(this.NewRow()));
+            public traitementRow NewtraitementRow() {
+                return ((traitementRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new QuestionRow(builder);
+                return new traitementRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(QuestionRow);
+                return typeof(traitementRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.QuestionRowChanged != null)) {
-                    this.QuestionRowChanged(this, new QuestionRowChangeEvent(((QuestionRow)(e.Row)), e.Action));
+                if ((this.traitementRowChanged != null)) {
+                    this.traitementRowChanged(this, new traitementRowChangeEvent(((traitementRow)(e.Row)), e.Action));
                 }
             }
             
@@ -468,8 +468,8 @@ namespace Audir {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.QuestionRowChanging != null)) {
-                    this.QuestionRowChanging(this, new QuestionRowChangeEvent(((QuestionRow)(e.Row)), e.Action));
+                if ((this.traitementRowChanging != null)) {
+                    this.traitementRowChanging(this, new traitementRowChangeEvent(((traitementRow)(e.Row)), e.Action));
                 }
             }
             
@@ -477,8 +477,8 @@ namespace Audir {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.QuestionRowDeleted != null)) {
-                    this.QuestionRowDeleted(this, new QuestionRowChangeEvent(((QuestionRow)(e.Row)), e.Action));
+                if ((this.traitementRowDeleted != null)) {
+                    this.traitementRowDeleted(this, new traitementRowChangeEvent(((traitementRow)(e.Row)), e.Action));
                 }
             }
             
@@ -486,14 +486,14 @@ namespace Audir {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.QuestionRowDeleting != null)) {
-                    this.QuestionRowDeleting(this, new QuestionRowChangeEvent(((QuestionRow)(e.Row)), e.Action));
+                if ((this.traitementRowDeleting != null)) {
+                    this.traitementRowDeleting(this, new traitementRowChangeEvent(((traitementRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveQuestionRow(QuestionRow row) {
+            public void RemovetraitementRow(traitementRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -520,7 +520,7 @@ namespace Audir {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "QuestionDataTable";
+                attribute2.FixedValue = "traitementDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -564,62 +564,63 @@ namespace Audir {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class QuestionRow : global::System.Data.DataRow {
+        public partial class traitementRow : global::System.Data.DataRow {
             
-            private QuestionDataTable tableQuestion;
+            private traitementDataTable tabletraitement;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal QuestionRow(global::System.Data.DataRowBuilder rb) : 
+            internal traitementRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableQuestion = ((QuestionDataTable)(this.Table));
+                this.tabletraitement = ((traitementDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Id {
+            public string nb_qst {
                 get {
                     try {
-                        return ((string)(this[this.tableQuestion.IdColumn]));
+                        return ((string)(this[this.tabletraitement.nb_qstColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'Id\' dans la table \'Question\' est DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'nb_qst\' dans la table \'traitement\' est DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableQuestion.IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string text {
-                get {
-                    try {
-                        return ((string)(this[this.tableQuestion.textColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'text\' dans la table \'Question\' est DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableQuestion.textColumn] = value;
+                    this[this.tabletraitement.nb_qstColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string reponse {
+            public string nbqsttraité {
                 get {
                     try {
-                        return ((string)(this[this.tableQuestion.reponseColumn]));
+                        return ((string)(this[this.tabletraitement.nbqsttraitéColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'reponse\' dans la table \'Question\' est DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'nbqsttraité\' dans la table \'traitement\' est DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableQuestion.reponseColumn] = value;
+                    this[this.tabletraitement.nbqsttraitéColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string nbqstnontrairé {
+                get {
+                    try {
+                        return ((string)(this[this.tabletraitement.nbqstnontrairéColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'nbqstnontrairé\' dans la table \'traitement\' est DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tabletraitement.nbqstnontrairéColumn] = value;
                 }
             }
             
@@ -628,63 +629,63 @@ namespace Audir {
             public string type {
                 get {
                     try {
-                        return ((string)(this[this.tableQuestion.typeColumn]));
+                        return ((string)(this[this.tabletraitement.typeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'type\' dans la table \'Question\' est DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'type\' dans la table \'traitement\' est DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableQuestion.typeColumn] = value;
+                    this[this.tabletraitement.typeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsIdNull() {
-                return this.IsNull(this.tableQuestion.IdColumn);
+            public bool Isnb_qstNull() {
+                return this.IsNull(this.tabletraitement.nb_qstColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetIdNull() {
-                this[this.tableQuestion.IdColumn] = global::System.Convert.DBNull;
+            public void Setnb_qstNull() {
+                this[this.tabletraitement.nb_qstColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IstextNull() {
-                return this.IsNull(this.tableQuestion.textColumn);
+            public bool IsnbqsttraitéNull() {
+                return this.IsNull(this.tabletraitement.nbqsttraitéColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SettextNull() {
-                this[this.tableQuestion.textColumn] = global::System.Convert.DBNull;
+            public void SetnbqsttraitéNull() {
+                this[this.tabletraitement.nbqsttraitéColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsreponseNull() {
-                return this.IsNull(this.tableQuestion.reponseColumn);
+            public bool IsnbqstnontrairéNull() {
+                return this.IsNull(this.tabletraitement.nbqstnontrairéColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetreponseNull() {
-                this[this.tableQuestion.reponseColumn] = global::System.Convert.DBNull;
+            public void SetnbqstnontrairéNull() {
+                this[this.tabletraitement.nbqstnontrairéColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IstypeNull() {
-                return this.IsNull(this.tableQuestion.typeColumn);
+                return this.IsNull(this.tabletraitement.typeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SettypeNull() {
-                this[this.tableQuestion.typeColumn] = global::System.Convert.DBNull;
+                this[this.tabletraitement.typeColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -692,22 +693,22 @@ namespace Audir {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class QuestionRowChangeEvent : global::System.EventArgs {
+        public class traitementRowChangeEvent : global::System.EventArgs {
             
-            private QuestionRow eventRow;
+            private traitementRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public QuestionRowChangeEvent(QuestionRow row, global::System.Data.DataRowAction action) {
+            public traitementRowChangeEvent(traitementRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public QuestionRow Row {
+            public traitementRow Row {
                 get {
                     return this.eventRow;
                 }
